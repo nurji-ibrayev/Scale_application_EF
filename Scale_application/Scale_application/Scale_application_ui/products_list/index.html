@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Scale_application - Products list</title>
+		<link rel="stylesheet" href="../style.css">
+	</head>
+
+	<header>
+		<nav>  
+            <a href="../index.html">Product categories</a>
+            <a href="../product_creation/index.html">Product creation</a>
+            <a href="#">Products list</a>
+            <a href="../view_product/index.html">View product</a>
+		</nav>
+	</header>
+
+	<body onload="displayProducts(); getCategoriesList()">
+		<div class="container" id="container">
+			<h2>Products list</h2>
+
+			<div class="products_filter" id="products_filter">
+				<select id="category_selection" onchange="filterProducts()">
+					<option value="" disabled selected>Select category to filter products</option>
+					<option value="All products">All products</option>
+				</select>
+			</div>
+
+			<div class="products_container" id="products_container"></div>
+		</div>
+
+		<script src="../js/product.js"></script>
+	</body>
+</html>
