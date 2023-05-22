@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Scale_application - Product categories</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+
+	<header>
+		<nav>  
+			<a href="#">Product categories</a>
+			<a href="product_creation/index.html">Product creation</a>
+			<a href="products_list/index.html">Products list</a>
+			<a href="view_product/index.html">View product</a>
+		</nav>
+	</header>
+
+	<body>
+		<div class="container" id="container">
+			<div class="categories_creation" id="categories_creation">
+				<div class="buttons" id="buttons">
+					<button id="create_button" onclick="addInput()">Add field</button>
+					<button id="save_button" onclick="addCategory()">Save</button>
+					<button id="cancel_button" onclick="document.getElementById('categories_creation').style.visibility = 'hidden'">Cancel</button>
+				</div>
+
+				<label>Category name*</label>
+				<input type="text" id="category_name" placeholder="Add category name">
+			</div>
+
+			<h2>Product categories</h2>
+			<div class="categories_container" id="categories_container"></div>
+
+			<div class="add_category_button" id="add_category_button" title="Add category">
+				<svg height="50" viewBox="0 0 20 20" fill-rule="evenodd"><path d="M16 9h-5V4H9v5H4v2h5v5h2v-5h5V9z"/></svg>
+			</div>
+		</div>
+
+		<script src="js/category.js"></script>
+	</body>
+</html>
